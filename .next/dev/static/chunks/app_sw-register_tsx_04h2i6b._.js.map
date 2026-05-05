@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/kcooper/workspace/fridge-scan/app/sw-register.tsx"],"sourcesContent":["\"use client\";\n\nimport { useEffect } from \"react\";\n\nexport function ServiceWorkerRegister() {\n  useEffect(() => {\n    if (typeof window === \"undefined\") return;\n    if (!(\"serviceWorker\" in navigator)) return;\n    if (process.env.NODE_ENV !== \"production\") return;\n    navigator.serviceWorker.register(\"/sw.js\").catch(() => {});\n  }, []);\n  return null;\n}\n"],"names":["ServiceWorkerRegister","navigator"],"mappings":";;;;AAQQ;AANR;;AAFA;;AAIO,SAASA;;IACd,IAAA,0KAAS;2CAAC;YACR;;YACA,IAAI,CAAC,CAAC,mBAAmBC,SAAS,GAAG;YACrC,wCAA2C;;;QAE7C;0CAAG,EAAE;IACL,OAAO;AACT;GARgBD;KAAAA"}}]
+}
